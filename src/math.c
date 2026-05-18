@@ -1,3 +1,4 @@
+#include "math.h"
 
 static const char *correct_characters = "0123456789()+*/-\t ";
 
@@ -18,7 +19,7 @@ static int check_char_in_str(const char *str, char c)
 }
 
 
-int check_correct_expression(char *expr)
+int precheck_correct_expression(char *expr)
 {
     while(*expr)
     {

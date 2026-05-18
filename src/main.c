@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
     char *expression = argv[1];
 
-    if (check_correct_expression(expression))
+    if (precheck_correct_expression(expression))
     {
         puts("Your expression is correct");
     } else {
