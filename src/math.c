@@ -1,5 +1,5 @@
 
-const char *correct_characters = "0123456789()+*/-\t ";
+static const char *correct_characters = "0123456789()+*/-\t ";
 
 
 static int check_char_in_str(const char *str, char c)
