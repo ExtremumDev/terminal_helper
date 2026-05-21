@@ -14,7 +14,7 @@ static int check_config()
 int create_default_configs(struct main_config *config)
 {
 
-    char *home_directory = getenv("HOME");
+    char *home_directory_copy, *home_directory = getenv("HOME");
 
     if(home_directory == NULL)
     {
@@ -31,7 +31,7 @@ int create_default_configs(struct main_config *config)
     config->file_searching_directories[1] = NULL;
 
 
-    char *home_directory_copy = malloc(strlen(home_directory) + 1);
+    home_directory_copy = malloc(strlen(home_directory) + 1);
 
     if(home_directory_copy == NULL)
     {
