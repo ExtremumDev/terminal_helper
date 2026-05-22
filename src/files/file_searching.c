@@ -27,6 +27,11 @@ struct searching_entry* scan_directory_for_file(
 
             struct searching_entry *new_entry = malloc(sizeof(struct searching_entry));
 
+            if (new_entry == NULL)
+            {
+                continue;
+            }
+
             new_entry->directory = directory;
             new_entry->file_name = next_file->d_name;
             new_entry->entry_start = entry_start;
